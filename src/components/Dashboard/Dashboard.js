@@ -11,7 +11,7 @@ class Dashboard extends Component {
       <div>
         <h2>Dashboard</h2>
         
-        <p>SPEED: {this.props.reduxState.speed.currentSpeed}</p>
+        <p>SPEED: {this.props.reduxState.speed.length}</p>
         
         <p>PASSENGER COUNT: {this.props.reduxState.passengers.length}</p>
 
