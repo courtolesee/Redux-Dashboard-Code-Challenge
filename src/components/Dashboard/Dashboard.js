@@ -11,15 +11,22 @@ class Dashboard extends Component {
       <div>
         <h2>Dashboard</h2>
         
-        <p>SPEED: GOES HERE</p>
-        <p>PASSENGER COUNT: GOES HERE</p>
+        <p>SPEED: {this.props.reduxState.speed.currentSpeed}</p>
+        
+        <p>PASSENGER COUNT: {this.props.reduxState.passengers.length}</p>
+
+        <ul>PASSENGER LIST:</ul>
+        {/* <li>{this.state.myName}</li> */}
+        { this.props.reduxState.passengers.map( ( item, i )  => 
+            <li key={ i }>{item}</li>) }
+
       </div>
     )
   }
 }
 
 const putReduxStateOnProps = ( reduxState ) => ({
-  // reduxState: reduxState.gatherSurveyInfo <-- add reducer here
+  reduxState: reduxState
 })
 
 export default connect( putReduxStateOnProps ) (Dashboard);

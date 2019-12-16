@@ -29,14 +29,22 @@ class SpeedControl extends Component {
     )
   }
 
+  submitForm = (event) => {
+    event.preventDefault();
+    console.log('speed adding:', this.state.currentSpeed);
+    this.props.dispatch( { type: 'ADD_SPEED', payload: this.state.currentSpeed } )
+  }
+
 
   render() {
     return (
       <div>
         <h2>Speed Control</h2>
-        <button onClick={ this.handleIncrease }>Increase Speed</button>
-        <p>SPEED: {this.state.currentSpeed}</p>
-        <button onClick={ this.handleDecrease }>Decrease Speed</button>
+        <form onSubmit= { this.submitForm }>
+          <button onClick={ this.handleIncrease }>Increase Speed</button>
+          <p>SPEED: {this.state.currentSpeed}</p>
+          <button onClick={ this.handleDecrease }>Decrease Speed</button>
+        </form>
       </div>
     )
   }

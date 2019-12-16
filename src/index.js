@@ -14,13 +14,20 @@ const passengers = ( state=[], action ) => {
   return state; 
 }
 
+const speed = ( state=[], action ) => {
+  if ( action.type === 'ADD_SPEED' ){
+      return [ ...state, action.payload ]        
+  }
+  return state; 
+}
+
 
 // be sure to combine your reducers!
 const storeInstance = createStore(
     // reducers,
   combineReducers({
     passengers,
-
+    speed
 }),
   applyMiddleware(logger)
 )
