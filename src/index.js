@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // put your reducers here!
-const passengers = ( state=[], action ) => {
+const passengers = ( state=['Courtney'], action ) => {
   if ( action.type === 'ADD_PASSENGER' ){
       return [ ...state, action.payload ]        
   }
