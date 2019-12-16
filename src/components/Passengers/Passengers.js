@@ -34,13 +34,12 @@ class Passengers extends Component {
     return (
       <div>
         <h2>Passengers</h2>
-        {JSON.stringify(this.props.reduxState.passengers)}
+        {/* {JSON.stringify(this.props.reduxState.passengers)} */}
         <form onSubmit= { this.submitForm }>
           <input type="text" name="name" placeholder="Enter Name" onChange={this.handleChange} value={ this.state.name }/>
           <button>Add Passenger</button>
         </form>
         <ul>PASSENGER LIST:</ul>
-        {/* <li>{this.state.myName}</li> */}
         { this.props.reduxState.passengers.map( ( item, i )  => 
             <li key={ i }>{item}</li>) }
 
