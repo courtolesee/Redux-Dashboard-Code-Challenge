@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 class Passengers extends Component {
 
   state = {
-    name: ''
+    name: '',
   }
 
   handleChange = ( event ) => {
@@ -19,12 +19,13 @@ class Passengers extends Component {
 
   submitForm = (event) => {
     event.preventDefault();
+    this.props.reduxState.passengers.push('Courtney');
     console.log('you added:', this.state.name);
     // clear inputs
     this.setState({
         name: '',
     })
-    this.props.dispatch( { type: 'ADD_PASSENGER', payload: this.state.name } )
+    this.props.dispatch( { type: 'ADD_PASSENGER', payload: this.state.name } );
   }
 
 
@@ -33,6 +34,7 @@ class Passengers extends Component {
     return (
       <div>
         <h2>Passengers</h2>
+        {JSON.stringify(this.props.reduxState.passengers)}
         <form onSubmit= { this.submitForm }>
           <input type="text" name="name" placeholder="Enter Name" onChange={this.handleChange} value={ this.state.name }/>
           <button>Add Passenger</button>
