@@ -19,7 +19,6 @@ class Passengers extends Component {
 
   submitForm = (event) => {
     event.preventDefault();
-    // this.props.reduxState.passengers.push('Courtney');
     console.log('you added:', this.state.name);
     // clear inputs
     this.setState({
@@ -46,7 +45,6 @@ class Passengers extends Component {
     )
   }
 }
-
 
 const putReduxStateOnProps = ( reduxState ) => ({
   reduxState: reduxState

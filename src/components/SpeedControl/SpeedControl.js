@@ -35,7 +35,6 @@ class SpeedControl extends Component {
     this.props.dispatch( { type: 'ADD_SPEED', payload: this.state.currentSpeed } )
   }
 
-
   render() {
     return (
       <div>
@@ -50,8 +49,4 @@ class SpeedControl extends Component {
   }
 }
 
-const putReduxStateOnProps = ( reduxState ) => ({
-  // reduxState: reduxState. <-- add reducer here
-})
-
-export default connect( putReduxStateOnProps ) (SpeedControl);
+export default connect( ) (SpeedControl);

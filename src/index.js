@@ -6,7 +6,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-// put your reducers here!
+// reducers
 const passengers = ( state=['Courtney'], action ) => {
   if ( action.type === 'ADD_PASSENGER' ){
       return [ ...state, action.payload ]        
@@ -14,16 +14,15 @@ const passengers = ( state=['Courtney'], action ) => {
   return state; 
 }
 
-const speed = ( state=[], action ) => {
+const speed = ( state=0, action ) => {
   if ( action.type === 'ADD_SPEED' ){
       return action.payload    
   }
   return state; 
 }
 
-// be sure to combine your reducers!
 const storeInstance = createStore(
-    // reducers,
+  // combining reducers
   combineReducers({
     passengers,
     speed

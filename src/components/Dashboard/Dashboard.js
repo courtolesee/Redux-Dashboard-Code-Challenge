@@ -10,16 +10,11 @@ class Dashboard extends Component {
     return (
       <div>
         <h2>Dashboard</h2>
-        
         <p>SPEED: {this.props.reduxState.speed}</p>
-        
         <p>PASSENGER COUNT: {this.props.reduxState.passengers.length}</p>
-
         <ul>PASSENGER LIST:</ul>
-        {/* <li>{this.state.myName}</li> */}
         { this.props.reduxState.passengers.map( ( item, i )  => 
             <li key={ i }>{item}</li>) }
-
       </div>
     )
   }
