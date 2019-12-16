@@ -16,11 +16,10 @@ const passengers = ( state=[], action ) => {
 
 const speed = ( state=[], action ) => {
   if ( action.type === 'ADD_SPEED' ){
-      return [ ...state, action.payload ]        
+      return action.payload    
   }
   return state; 
 }
-
 
 // be sure to combine your reducers!
 const storeInstance = createStore(

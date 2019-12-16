@@ -9,7 +9,6 @@ class Passengers extends Component {
 
   state = {
     name: '',
-    myName: 'Courtney'
   }
 
   handleChange = ( event ) => {
@@ -39,7 +38,7 @@ class Passengers extends Component {
           <button>Add Passenger</button>
         </form>
         <ul>PASSENGER LIST:</ul>
-        <li>{this.state.myName}</li>
+        {/* <li>{this.state.myName}</li> */}
         { this.props.reduxState.passengers.map( ( item, i )  => 
             <li key={ i }>{item}</li>) }
 
