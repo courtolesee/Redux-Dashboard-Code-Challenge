@@ -11,6 +11,7 @@ import Dashboard from '../Dashboard/Dashboard';
 
 
 class App extends Component {
+
   render() {
     return (
       <Router>

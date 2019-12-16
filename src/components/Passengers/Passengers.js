@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 class Passengers extends Component {
 
   state = {
-    name: '',
+    name: ''
   }
 
   handleChange = ( event ) => {
