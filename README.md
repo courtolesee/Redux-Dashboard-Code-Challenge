@@ -1,4 +1,6 @@
 # Redux Code Challenge
+This was a code challenge during week 12 of Prime. 
+Duration: Successfully completed within the 1.5 hours of time given. Has not been altered since. 
 
 
 ## INSTRUCTIONS
